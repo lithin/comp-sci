@@ -1,15 +1,15 @@
 import { LinkedList } from "./linkedList";
 
 // FIFO - first in, first out
-export class Queue {
-  public q: LinkedList;
+export class Queue<V> {
+  public q: LinkedList<V>;
 
   constructor() {
     this.q = new LinkedList();
   }
 
   // O(1)
-  public enqueue(value: any) {
+  public enqueue(value: V) {
     this.q.append(value);
   }
 
